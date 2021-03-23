@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "della respira", sans-serif;
+  font-weight: 400;
+}
+
+.logoImg {
+  max-height: 64px;
+  height: 100%;
+  width: auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.hero {
+  background-image: url("../img/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
