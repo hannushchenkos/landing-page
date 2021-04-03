@@ -124,6 +124,7 @@ body {
 
 .hero {
   padding-top: 189px;
+  height: 700px;
   background-image: url("../img/hero-img.jpg");
   background-position: center;
   background-size: cover;
@@ -146,6 +147,8 @@ body {
 .hero-descr {
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 150px;
+  max-width: 70%;
 }
 
 .link {
@@ -173,6 +176,74 @@ body {
   border-bottom: 1px dashed currentColor;
 }
 
-.hero-link:hover {
+.link:hover {
   color: tomato;
+}
+
+.services {
+  margin-bottom: -160px;
+  padding: 150px 0;
+}
+
+.services-header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 5px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3%;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.services-titles {
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: darkgoldenrod;
+}
+
+.services-descr {
+  margin: 0;
+  line-height: 22px;
+  font-size: 16px;
+  font-style: normal;
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+.service-link {
+  margin-top: auto;
+}
+
+.get-started {
+  background-color: #fafafa;
+  width: 85%;
+  padding: 70px 0;
+  position: relative;
+  top: 180px;
+}
+
+.get-started-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.get-started-link {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer {
+  background: linear-gradient(180deg, rgb(71, 23, 1), rgb(111, 37, 11));
+  background-position: center;
+  background-size: cover;
 }
