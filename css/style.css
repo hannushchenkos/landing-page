@@ -30,6 +30,14 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: "Faible";
+  src: url(../fonts/Faible-Medium.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+
 :root {
   --font-family: "Faible", sans-serif;
 }
@@ -181,7 +189,7 @@ body {
 }
 
 .services {
-  margin-bottom: -160px;
+  margin-bottom: -220px;
   padding: 150px 0;
 }
 
@@ -189,6 +197,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 5px;
+  color: darkgoldenrod;
 }
 
 .services-list {
@@ -222,19 +231,26 @@ body {
 
 .service-link {
   margin-top: auto;
+  margin-bottom: 0;
 }
 
 .get-started {
-  background-color: #fafafa;
-  width: 85%;
-  padding: 70px 0;
   position: relative;
   top: 180px;
+  background-color: #fbfbfb;
+  width: 85%;
+  padding: auto 0;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  box-shadow: 40px 65px 100px rgba(0, 0, 0, 0.4);
 }
 
 .get-started-title {
+  margin: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 30px;
+  max-width: 822px;
 }
 
 .get-started-link {
@@ -243,7 +259,198 @@ body {
 }
 
 .footer {
+  padding-top: 200px;
   background: linear-gradient(180deg, rgb(71, 23, 1), rgb(111, 37, 11));
   background-position: center;
   background-size: cover;
+  color: #fff;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 65px;
+  border-bottom: 1px solid ivory;
+}
+
+.footer-contacts:not(:last-child) {
+  margin-right: 280px;
+}
+
+.footer-contacts-text {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-contacts-value {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+}
+.footer-middle {
+  --grid-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--grid-gap);
+  padding: 40px 0;
+  border-bottom: 1px solid ivory;
+}
+
+.footer-column:last-child {
+  position: relative;
+}
+
+.footer-column:last-child::before {
+  background-color: #ebc089;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * (var(--grid-gap)));
+  width: 1px;
+  height: 100%;
+}
+
+.footer-column-title {
+  margin-bottom: 30px;
+}
+
+.footer-item {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.footer-item-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ebc089;
+}
+
+.footer-column-descr {
+  margin: 0;
+  font-weight: 500;
+  font-style: italic;
+  color: #ebc089;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: block;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  filter: invert(1);
+  background-color: rgb(51, 144, 161);
+  opacity: 0.7;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+}
+
+.social-row-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social-icon-fb {
+  background-image: url(../img/facebook.png);
+}
+
+.social-icon-inst {
+  background-image: url(../img/instagram.png);
+}
+
+.social-icon-tw {
+  background-image: url(../img/twitter.png);
+}
+
+.social-icon-lin {
+  background-image: url(../img/linkedin.png);
+}
+
+.copyright {
+  line-height: 20px;
+  font-size: 12px;
+  color: #ebc089;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+@media (max-width: 992px) {
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+  }
+
+  .footer-middle {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+  }
+
+  .footer-column:last-child::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 50px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 45px;
+    line-height: 47px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .services-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-middle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .logoImg-bottom {
+    display: none;
+  }
 }
