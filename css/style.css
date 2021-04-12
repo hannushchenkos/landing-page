@@ -155,7 +155,7 @@ body {
 .hero-descr {
   font-size: 18px;
   line-height: 26px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   max-width: 70%;
 }
 
@@ -170,6 +170,11 @@ body {
   margin-bottom: 30px;
   padding: 5px 0;
   transition: color 0.5s ease-in-out;
+}
+
+.hero-link {
+  padding-top: 0;
+  color: lightsalmon;
 }
 
 .link svg {
@@ -189,8 +194,8 @@ body {
 }
 
 .services {
-  margin-bottom: -220px;
-  padding: 150px 0;
+  margin-bottom: -180px;
+  padding: 100px 0;
 }
 
 .services-header {
@@ -430,7 +435,11 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+@media (x-width: 375px) {
+  .services {
+    padding: 70px 0;
+  }
+
   .hero-title {
     font-size: 40px;
     line-height: 42px;
@@ -449,8 +458,7 @@ body {
     align-items: center;
     margin-top: 100px;
   }
-
-  .logoImg-bottom {
+  ma .logoImg-bottom {
     display: none;
   }
 }
